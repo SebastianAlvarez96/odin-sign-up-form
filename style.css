@@ -1,0 +1,72 @@
+*{
+  border: 0px solid red;
+}
+
+@font-face {
+    font-family: 'true_crimesregular';
+    src: url('font/true-crimes-webfont.woff2') format('woff2'),
+         url('font/true-crimes-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+  --main-bg: rgba(26, 39, 99, 0.39);
+  --main-color: antiquewhite;
+}
+
+html, body{
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  font-size: 18px;
+  height: 100%;
+  width: 100%;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.visual{
+  display: flex;
+  background-image: url("images/bgimage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.name{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-bg);
+  border-radius: 10px;
+  width: 95%;
+  font: 5.3rem "true_crimesregular";
+  color: var(--main-color);
+}
+
+.name img{
+  width: 5rem;
+  height: 5.3rem;
+  margin: 7px;
+}
+
+.reference{
+  padding: 7px;
+  border-radius: 7px;
+  background-color: var(--main-bg);
+  color: var(--main-color);
+  margin: 7px;
+}
+
+a:link{
+  text-decoration: none;
+}
+.reference a{
+  color: var(--main-color);
+}
