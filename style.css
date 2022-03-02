@@ -80,20 +80,100 @@ a:link{
   background-color: black;
   color: var(--main-color);
   line-height: 25px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .text, .login{
-  padding-left: 15px;
+  padding: 7px 15px;
   text-shadow: 0.8px 0.8px 0.5px #6226e6;
 }
 
-form{
-  padding: 0px 15px;
-  letter-spacing: 1px;
+.content-form{
   background-color: var(--main-bg);
-  border-radius: 7px;
+  font-size: 2rem;
+  padding: 15px 15px;
+  margin: 0px;
   box-shadow: 1px 1px 1px var(--main-color);
+}
+
+form{
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  border-radius: 7px;
+}
+
+.input{
+  display: flex;
+  flex-flow: column wrap;
+  margin-right: 1.5rem;
+}
+
+input{
+  border-radius: 2.5px;
+  width: 12rem;
+  margin-top: 5px;
+}
+
+input:hover{
+  background-color: #c9a093;
+}
+
+input:invalid {
+  box-shadow: 0 0 7px 2px red;
+}
+
+input + span {
+  position: relative;
+}
+
+input:required + span::after {
+  font-size: 0.55rem;
+  position: absolute;
+  content: "required";
+  color: var(--main-color);
+  background-color: rgba(12, 11, 11, 0.884);
+  padding: 1px 1.5px;
+  top: -46px;
+  left: 158px;
+  border-radius: 0.8px;
+}
+
+input + span::before {
+  position: absolute;
+  right: -20px;
+  top: -21px;
+}
+
+input:invalid + span::before {
+  content: '✖';
+  color: red;
+}
+
+input:valid + span::before {
+  content: '✓';
+  color: green;
+}
+
+button{
+  cursor: pointer;
+  width: 10rem;
+  padding: 7px 9px;
+  margin: 15px;
+  border-radius: 5px;
+  background-color: #a4300d;
+  color: var(--main-color);
+  text-shadow: 1px 1px 1px #6226e6;
+}
+
+button:hover{
+  background-color: green;
+}
+
+button:active{
+  background-color: var(--main-bg);
 }
 
 .login{
@@ -104,4 +184,14 @@ form{
   font-weight: bolder;
   color: #a4300d;
   text-shadow: 0.8px 0.8px 0.5px var(--main-color);
+}
+
+a:hover{
+  color: green;
+  font-weight: bolder;
+}
+
+a:active{
+  color: var(--main-bg);
+  text-shadow: 1px 1px 1px var(--main-color);
 }
