@@ -15,13 +15,13 @@
   --main-color: antiquewhite;
 }
 
-html, body{
+body{
   display: flex;
   margin: 0px;
   padding: 0px;
   font-size: 18px;
-  height: 100%;
-  width: 100%;
+  min-height: 100vh;
+  width: 100vw;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -31,7 +31,7 @@ html, body{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-width: 50%;
+  min-width: 50vw;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -48,6 +48,7 @@ html, body{
   width: 95%;
   font: 5.3rem "true_crimesregular";
   color: var(--main-color);
+  padding: 7px;
 }
 
 .name img{
@@ -67,6 +68,40 @@ html, body{
 a:link{
   text-decoration: none;
 }
+
 .reference a{
   color: var(--main-color);
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: black;
+  color: var(--main-color);
+  line-height: 25px;
+  font-size: 1.1rem;
+}
+
+.text, .login{
+  padding-left: 15px;
+  text-shadow: 0.8px 0.8px 0.5px #6226e6;
+}
+
+form{
+  padding: 0px 15px;
+  letter-spacing: 1px;
+  background-color: var(--main-bg);
+  border-radius: 7px;
+  box-shadow: 1px 1px 1px var(--main-color);
+}
+
+.login{
+  text-shadow: 0.8px 0.8px 0.5px #6226e6;
+}
+
+.login > a{
+  font-weight: bolder;
+  color: #a4300d;
+  text-shadow: 0.8px 0.8px 0.5px var(--main-color);
 }
